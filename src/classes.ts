@@ -1,32 +1,28 @@
 /* We create a class to create a small pet */
 // We the mother class
-class Oviparous {
+class SmallPet {
+  name: string;
+  kind: string;
+  constructor(name: string, kind: string) {
+    this.name = name;
+    this.kind = kind;
+  }
+}
+class Oviparous extends SmallPet {
+  
   laysEggs() {
     console.log("An egg...");
   }
 }
 // the classes act as interfaces
 class Bird extends Oviparous {
-  name: string;
-  kind: string;
-  constructor(name: string, kind: string) {
-    super();
-    this.name = name;
-    this.kind = kind;
-  }
+ 
   fly() {
     console.log("Flying");
   }
 }
 
 class Fish extends Oviparous {
-  name: string;
-  kind: string;
-  constructor(name: string, kind: string) {
-    super();
-    this.name = name;
-    this.kind = kind;
-  }
   swim() {
     console.log("Swimming");
   }
