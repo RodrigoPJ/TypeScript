@@ -15,7 +15,7 @@ function fly():string {
 function swim() {
   return "Swimming...";
 }
-
+ 
 interface Bird {
   name: string;
   kind: string;
@@ -29,8 +29,9 @@ interface Fish {
   layEggs(): string;
   swim():string;
 }
-
-function getSmallPet(name: string, kind: string): Fish | Bird | undefined{
+ 
+function getSmallPet(name: string, kind: string): Fish | Bird | undefined {
+  if (name === "xdet") return undefined;
   if (kind === "fish") {
     return <Fish>{
       name,
